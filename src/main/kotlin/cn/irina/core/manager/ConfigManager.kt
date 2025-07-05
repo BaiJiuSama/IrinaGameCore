@@ -2,8 +2,6 @@ package cn.irina.core.manager
 
 import cn.irina.core.Main
 import cn.irina.core.Main.Companion.plugin
-import cn.irina.core.manager.TeleportPointsManager.teleportPointsConfig
-import cn.irina.core.manager.TeleportPointsManager.teleportPointsFile
 import cn.irina.core.util.CC
 import cn.irina.core.util.Log
 import kotlinx.coroutines.CoroutineScope
@@ -33,13 +31,11 @@ object ConfigManager: CoroutineScope {
 
     fun loadConfig() {
         launch {
-            // 加载传送点Config
             configFile = File(plugin.dataFolder, "config.yml")
 
-            // 如果不存在, 则创建
             if (!configFile.exists()) {
                 try {
-                    configFile.createNewFile() // 尝试创建新文件
+                    configFile.createNewFile()
                     Log.send(CC.color("$prefix&a已创建 &f\"Config.yml\""))
                 } catch (e: Exception) {
                     Log.send(e.localizedMessage)
@@ -55,7 +51,7 @@ object ConfigManager: CoroutineScope {
     fun saveConfig(config: YamlConfiguration) {
         launch {
             try {
-                config.save(configFile) // 保存配置到文件
+                config.save(configFile)
                 Log.send(CC.color("$prefix&fConfig.yml &a保存完毕"))
             } catch (e: Exception) {
                 Log.send(CC.color("$prefix&c无法保存 &fConfig.yml"))

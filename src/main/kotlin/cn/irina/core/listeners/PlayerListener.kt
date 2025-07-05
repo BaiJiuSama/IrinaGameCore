@@ -25,7 +25,7 @@ class PlayerListener: Listener {
     fun onJoin(evt: PlayerJoinEvent) {
         config.getString("Message.JoinAnnouncer")?.let {
             evt.joinMessage = null
-            Bukkit.broadcastMessage(CC.color(PlaceholderAPIUtil.parse(evt.player, it.replace("{player}", evt.player.displayName))))
+            Bukkit.broadcastMessage(CC.color(PlaceholderAPIUtil.parse(evt.player, it)))
         }
     }
 
@@ -33,7 +33,7 @@ class PlayerListener: Listener {
     fun onQuit(evt: PlayerQuitEvent) {
         config.getString("Message.QuitAnnouncer")?.let {
             evt.quitMessage = null
-            Bukkit.broadcastMessage(CC.color(PlaceholderAPIUtil.parse(evt.player, it.replace("{player}", evt.player.displayName))))
+            Bukkit.broadcastMessage(CC.color(PlaceholderAPIUtil.parse(evt.player, it)))
         }
         evt.player.respawnLocation
     }

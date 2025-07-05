@@ -2,6 +2,7 @@ package cn.irina.core.command
 
 import cn.irina.core.Main
 import cn.irina.core.command.exceptions.CommandExceptionHandler
+import cn.irina.core.command.type.admin.GameModeControl
 import cn.irina.core.command.type.admin.LoreControl
 import cn.irina.core.command.type.admin.TeleportPointControl
 import cn.irina.core.command.type.player.PointTeleport
@@ -31,6 +32,7 @@ object CommandHandler {
     fun load() {
         val commands = listOf(
             LoreControl(),
+            GameModeControl(),
 
             TeleportPointControl(),
             PointTeleport()

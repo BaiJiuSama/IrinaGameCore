@@ -1,4 +1,3 @@
 Message:
-  # {player} = Player
-  JoinAnnouncer: "&8[&a+&8] &7{player}"
-  QuitAnnouncer: "&8[&c-&8] &7{player}"
+  JoinAnnouncer: "&8[&a+&8] &7%player_name%"
+  QuitAnnouncer: "&8[&c-&8] &7%player_name%"

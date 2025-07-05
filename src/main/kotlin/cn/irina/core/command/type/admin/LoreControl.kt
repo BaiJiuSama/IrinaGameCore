@@ -196,36 +196,34 @@ class LoreControl {
         CC.color(helpList).forEach { myself.sendMessage(it) }
     }
 
-    private val helpList by lazy {
-        val barChar = "&f&m               &r &#00ffffI&#15ffffr&#2bffffi&#40ffffn&#55ffffa&#6affffG&#80ffffa&#95ffffm&#aaffffe&#bfffffC&#d5ffffo&#eaffffr&#ffffffe &7- &8&oLoreControl &f&m               &r"
-
-        listOf(
-            "",
-            barChar,
-            "",
-            "&7展示此文本",
-            "&f/lc help | /lc",
-            "",
-            "&7编辑手持物名称",
-            "&f/lc name &8<String>",
-            "",
-            "&7将手持物的描述增加一行",
-            "&f/lc add &8<String>",
-            "",
-            "&7设置手持物的某一行描述",
-            "&f/lc set &8<Line> <String>",
-            "",
-            "&7删除手持物的某一行描述",
-            "&f/lc del &8<line>",
-            "",
-            "&7删除手持物的最下一行描述",
-            "&f/lc lastDel",
-            "",
-            "&7一键清除手持物描述",
-            "&f/lc clear",
-            "",
-            barChar,
-            ""
-        )
-    }
+    val barChar = "&f&m               &r &#00ffffI&#15ffffr&#2bffffi&#40ffffn&#55ffffa&#6affffG&#80ffffa&#95ffffm&#aaffffe&#bfffffC&#d5ffffo&#eaffffr&#ffffffe &7- &8&oLoreControl &f&m               &r"
+    private val helpList = listOf(
+        "",
+        barChar,
+        "",
+        "&7展示此文本",
+        "&f/lc help | /lc",
+        "",
+        "&7编辑手持物名称",
+        "&f/lc name &8<String>",
+        "",
+        "&7将手持物的描述增加一行",
+        "&f/lc add &8<String>",
+        "",
+        "&7设置手持物的某一行描述",
+        "&f/lc set &8<Line> <String>",
+        "",
+        "&7删除手持物的某一行描述",
+        "&f/lc del &8<line>",
+        "",
+        "&7删除手持物的最下一行描述",
+        "&f/lc lastDel",
+        "",
+        "&7一键清除手持物描述",
+        "&f/lc clear",
+        "",
+        barChar,
+        ""
+    )
 }
+
